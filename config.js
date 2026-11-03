@@ -4,5 +4,5 @@ window.ANZEIGENTURBO = {
   priceEur: 9,
   miniPriceEur: 1,
   mode: "live",
-  publicSite: "https://anzeigenturbo.github.io/anzeigenturbo/",
+  publicSite: "https://erikvongregory-gif.github.io/anzeigenturbo/",
 };

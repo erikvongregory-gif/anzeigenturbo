@@ -96,4 +96,4 @@ Wann: Bestehende Anzeige performt nicht.
 Schreibe diese Anzeige neu (Titel + Lead + 4 Bullets + CTA). Original: """[TEXT]""". Behalte Fakten, schaerfe Klarheit und Keywords.
 ```
 
-Vollversion AnzeigenTurbo (45+ Prompts, 9€): https://anzeigenturbo.github.io/anzeigenturbo/
+Vollversion AnzeigenTurbo (45+ Prompts, 9€): https://erikvongregory-gif.github.io/anzeigenturbo/
