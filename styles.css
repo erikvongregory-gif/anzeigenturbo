@@ -186,18 +186,19 @@ body { overflow-x: hidden; }
   height: auto;
   margin: 0;
   overflow: hidden;
-  background: transparent;
+  background: var(--bg);
   transform: rotate(-3deg);
   z-index: 1;
   pointer-events: none;
-  box-shadow: 10px 14px 0 rgba(10, 10, 10, 0.14);
+  outline: 3px solid var(--ink);
+  box-shadow: 10px 14px 0 var(--accent);
 }
 .hero-object img {
   width: 100%;
   max-width: none;
   height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center 70%;
   margin: 0;
 }
 .pack-meta {
