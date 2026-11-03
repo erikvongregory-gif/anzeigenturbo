@@ -179,25 +179,25 @@ body { overflow-x: hidden; }
 
 .hero-object {
   position: absolute;
-  right: var(--margin);
-  top: 8vh;
-  width: min(46vw, 520px);
+  right: max(var(--margin), 2vw);
+  top: 6vh;
+  width: min(42vw, 480px);
   aspect-ratio: 1 / 1;
   height: auto;
   margin: 0;
   overflow: hidden;
   background: transparent;
-  transform: rotate(-4deg);
+  transform: rotate(-3deg);
   z-index: 1;
   pointer-events: none;
-  box-shadow: 12px 18px 0 rgba(10, 10, 10, 0.12);
+  box-shadow: 10px 14px 0 rgba(10, 10, 10, 0.14);
 }
 .hero-object img {
   width: 100%;
   max-width: none;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: center bottom;
   margin: 0;
 }
 .pack-meta {
@@ -605,12 +605,12 @@ body { overflow-x: hidden; }
   overflow: hidden;
 }
 .cta-media img {
-  width: 140%;
+  width: 100%;
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  margin-left: -10%;
+  object-position: center 40%;
+  margin: 0;
 }
 .cta-copy {
   position: relative;
@@ -759,13 +759,14 @@ body { overflow-x: hidden; }
     position: relative;
     right: auto;
     top: auto;
-    width: calc(100% - (2 * var(--margin)));
+    width: min(92vw, 420px);
     aspect-ratio: 1 / 1;
     height: auto;
     max-height: none;
-    margin: 1.25rem var(--margin) 0;
+    margin: 1.25rem auto 0;
     transform: rotate(-2deg);
     pointer-events: auto;
+    box-shadow: 8px 12px 0 rgba(10, 10, 10, 0.14);
   }
   .hero {
     display: flex;
