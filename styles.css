@@ -179,27 +179,26 @@ body { overflow-x: hidden; }
 
 .hero-object {
   position: absolute;
-  right: max(var(--margin), 2vw);
-  top: 6vh;
-  width: min(42vw, 480px);
+  right: max(var(--margin), 1vw);
+  top: 4vh;
+  width: min(48vw, 560px);
   aspect-ratio: 1 / 1;
   height: auto;
   margin: 0;
-  overflow: hidden;
-  background: var(--bg);
+  overflow: visible;
+  background: transparent;
   transform: rotate(-3deg);
   z-index: 1;
   pointer-events: none;
-  outline: 3px solid var(--ink);
-  box-shadow: 10px 14px 0 var(--accent);
 }
 .hero-object img {
-  width: 118%;
+  width: 100%;
   max-width: none;
-  height: 118%;
-  object-fit: cover;
-  object-position: center 52%;
-  margin: -6% 0 0 -9%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  margin: 0;
+  filter: drop-shadow(14px 18px 0 rgba(10, 10, 10, 0.16));
 }
 .pack-meta {
   position: relative;
@@ -760,15 +759,13 @@ body { overflow-x: hidden; }
     position: relative;
     right: auto;
     top: auto;
-    width: min(92vw, 420px);
+    width: min(92vw, 440px);
     aspect-ratio: 1 / 1;
     height: auto;
     max-height: none;
-    margin: 1.25rem auto 0;
+    margin: 0.75rem auto 0;
     transform: rotate(-2deg);
     pointer-events: auto;
-    outline: 3px solid var(--ink);
-    box-shadow: 8px 12px 0 var(--accent);
   }
   .hero {
     display: flex;
