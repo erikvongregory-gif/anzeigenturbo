@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danke – AnzeigenTurbo Mini</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="buy" style="min-height:100svh">
+    <div class="buy-grid" style="align-items:center;min-height:80svh">
+      <div class="buy-copy" style="padding-top:0">
+        <h1 style="font-size:clamp(2.4rem,4vw,4rem);letter-spacing:-0.035em;line-height:0.95;font-weight:400;max-width:10ch;margin:0 0 1rem">Danke.</h1>
+        <p>Dein Mini-Pack ist bereit.</p>
+        <a class="button ink wide" style="margin-top:1.25rem;max-width:22rem" href="./download/m1e9k0/AnzeigenTurbo-Mini.md" download>10 Prompts herunterladen</a>
+        <p class="fine">Upgrade auf das Vollpack (45+): <a class="link-plain" id="upgrade-link" href="./#kaufen">für 9€</a></p>
+        <p class="fine">
+          <a href="./impressum.html">Impressum</a> ·
+          <a href="./datenschutz.html">Datenschutz</a> ·
+          <button type="button" class="link-plain cookie-open" data-cookie-open>Cookie-Einstellungen</button>
+        </p>
+      </div>
+      <aside class="receipt" aria-hidden="true">
+        <p class="receipt-total"><span>Mini</span><span>OK</span></p>
+        <ul class="receipt-rows">
+          <li>10 Prompts bezahlt</li>
+          <li>Sofort-Download bereit</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <script src="./config.js"></script>
+  <script src="./cookies.js"></script>
+  <script>
+    (function () {
+      var cfg = window.ANZEIGENTURBO || {};
+      var a = document.getElementById("upgrade-link");
+      if (a && cfg.paymentUrl) a.href = cfg.paymentUrl;
+    })();
+  </script>
+</body>
+</html>
