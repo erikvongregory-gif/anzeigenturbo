@@ -173,6 +173,19 @@ a { color: inherit; }
   display: none;
   margin-top: 1.25rem;
 }
+.hero-cta-row {
+  display: none;
+  gap: 0.85rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+.hero-mini {
+  color: var(--ink, #111);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 
 html { scrollbar-gutter: stable; overflow-x: hidden; }
 body { overflow-x: hidden; }
@@ -749,10 +762,15 @@ body { overflow-x: hidden; }
     min-height: auto;
     padding-bottom: 5.5rem;
   }
+  .hero-cta-row {
+    display: flex;
+  }
   .hero-buy-inline {
     display: inline-flex;
-    width: 100%;
+    width: auto;
+    min-width: 10rem;
     min-height: 3.25rem;
+    margin-top: 0;
   }
   .hero h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); max-width: 11ch; }
   .hero-object {
