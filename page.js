@@ -2,27 +2,27 @@
   // Stripe / payment
   var cfg = window.ANZEIGENTURBO || {};
   var link = cfg.paymentUrl || "";
+  var mini = cfg.miniPaymentUrl || "";
   var mode = cfg.mode || "test";
-  var buyIds = ["stripe-buy", "buy-btn", "top-buy", "cta-buy"];
-  var note = document.getElementById("pay-note");
-
-  function wire(btn) {
+  // Vollzugriff 9€
+  ["stripe-buy"].forEach(function (id) {
+    var btn = document.getElementById(id);
     if (!btn) return;
-    if (link && link.indexOf("http") === 0) {
-      btn.href = link;
-    } else {
-      btn.href = "#";
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        alert("Noch kein öffentlicher Payment-Link. Bitte Live-Stripe-Account verbinden.");
-      });
+    if (link && link.indexOf("http") === 0) btn.href = link;
+  });
+  // Mini 1€ bleibt hardcodiert / config – nicht mit 9€ überschreiben
+  ["stripe-mini", "buy-btn", "top-mini", "cta-buy", "hero-mini"].forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (!btn || !mini || mini.indexOf("http") !== 0) return;
+    if (!btn.getAttribute("href") || btn.getAttribute("href") === "#" || btn.getAttribute("href").indexOf("buy.stripe.com") === -1) {
+      btn.href = mini;
     }
-  }
-  buyIds.forEach(function (id) { wire(document.getElementById(id)); });
+  });
+  var note = document.getElementById("pay-note");
   if (note) {
-    note.textContent = link && link.indexOf("http") === 0
+    note.textContent = (mini || link)
       ? (mode === "live"
-        ? "Live-Checkout · sichere Zahlung über Stripe · Sofort-Download"
+        ? "Live-Checkout · Stripe · Sofort-Download · Mini 1€ oder Voll 9€"
         : "Stripe Checkout · Testmodus")
       : "Payment-Link fehlt – bitte Live-Stripe verbinden.";
   }
