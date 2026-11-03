@@ -767,7 +767,8 @@ body { overflow-x: hidden; }
     margin: 1.25rem auto 0;
     transform: rotate(-2deg);
     pointer-events: auto;
-    box-shadow: 8px 12px 0 rgba(10, 10, 10, 0.14);
+    outline: 3px solid var(--ink);
+    box-shadow: 8px 12px 0 var(--accent);
   }
   .hero {
     display: flex;
