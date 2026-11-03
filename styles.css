@@ -194,12 +194,12 @@ body { overflow-x: hidden; }
   box-shadow: 10px 14px 0 var(--accent);
 }
 .hero-object img {
-  width: 145%;
+  width: 118%;
   max-width: none;
-  height: 145%;
+  height: 118%;
   object-fit: cover;
-  object-position: center 55%;
-  margin: -18% 0 0 -22%;
+  object-position: center 52%;
+  margin: -6% 0 0 -9%;
 }
 .pack-meta {
   position: relative;
